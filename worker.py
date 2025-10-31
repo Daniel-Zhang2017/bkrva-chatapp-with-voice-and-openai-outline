@@ -6,7 +6,7 @@ openai_client = OpenAI()
 
 def speech_to_text(audio_binary):
     # Set up Watson Speech-to-Text HTTP Api url
-    base_url = 'https://hhzhang6c-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    base_url = 'https://sn-watson-stt.labs.skills.network'
     api_url = base_url+'/speech-to-text/api/v1/recognize'
     # Set up parameters for our HTTP request
     params = {
@@ -27,7 +27,7 @@ def speech_to_text(audio_binary):
 
 def text_to_speech(text, voice=""):
     # Set up Watson Text-to-Speech HTTP Api url
-    base_url = 'https://hhzhang6c-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    base_url = 'https://sn-watson-stt.labs.skills.network'
     api_url = base_url + '/text-to-speech/api/v1/synthesize?output=output_text.wav'
     # Adding voice parameter in api_url if the user has selected a preferred voice
     if voice != "" and voice != "default":
